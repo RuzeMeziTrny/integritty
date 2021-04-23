@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,8FAAI;AAEZ,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,UAAU;CACvB;;AACD,AAAA,CAAC;AACD,MAAM;AACN,OAAO,CAAC;EACN,UAAU,EAAE,OAAO;CACpB;;AAED,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;CACV",
+    "sources": [
+        "styles.scss",
+        "_generic.scss",
+        "_variables-mixins.scss",
+        "_header.scss",
+        "_hero.scss",
+        "_info.scss",
+        "_footer.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
