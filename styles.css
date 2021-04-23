@@ -56,6 +56,7 @@ body {
   background-color: transparent;
   border: 1px solid #6b6b6b;
   border-radius: 5px;
+  outline: none;
   width: 80px;
   height: 40px;
   cursor: pointer;
@@ -70,7 +71,34 @@ body {
           align-items: center;
 }
 
+.nav-menu:hover {
+  color: #24afa1;
+}
+
 .nav-bar {
+  list-style-type: none;
+  padding: 5px 0 0 0;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  z-index: 2;
+  background-color: white;
+  border-radius: 24px 5px 5px 5px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.nav-bar__item {
+  padding: 10px;
+  color: #3d3d3d;
+  cursor: pointer;
+}
+
+.nav-bar__item:hover {
+  color: #24afa1;
+}
+
+.hidden {
   display: none;
 }
 
@@ -79,7 +107,13 @@ body {
     display: none;
   }
   .nav-bar {
-    display: block;
+    padding: 0;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    font-size: 1em;
   }
 }
 
