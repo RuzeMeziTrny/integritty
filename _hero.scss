@@ -1,0 +1,92 @@
+.hero {
+  color: #ffffff;
+  font-family: $font-headings;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 326px 49px auto;
+
+  &-img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background-color: $color-green;
+    background-image: linear-gradient($color-green, $color-green),
+      url('/assets/vaccination.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 375px;
+    @include flex-center;
+
+    &__heading {
+      font-size: 38px;
+      line-height: 56px;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    &__circle {
+      position: relative;
+    }
+
+    &__circle::after {
+      content: '';
+      display: block;
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      background-color: $color-yellow;
+      position: absolute;
+      top: -26px;
+      right: -4px;
+      z-index: -1;
+      // pozicování není ideální řešení, jak to udělat jinak?
+    }
+  }
+}
+
+.counter {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  justify-self: center;
+  width: 206px;
+  height: 206px;
+  border-radius: 50%;
+  background-color: $color-brown;
+  @include flex-center;
+  flex-direction: column;
+  border: 6px solid $color-grey;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border: 6px solid white;
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__number {
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__date {
+    line-height: 1.5;
+    margin: 0;
+    display: inline-block;
+  }
+}

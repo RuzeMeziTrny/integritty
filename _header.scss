@@ -1,0 +1,88 @@
+.header {
+  font-family: $font-headings;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px 15px 20px;
+  @include flex-sides;
+  border-bottom: 5px solid $color-yellow;
+}
+
+.logo {
+  font-size: 1.5em;
+  line-height: 1.15;
+
+  &__text {
+    color: #636363;
+    margin: 0;
+
+    &--red {
+      color: $color-red;
+    }
+  }
+}
+
+.nav {
+  &-menu {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $color-dark;
+    text-transform: inherit;
+    background-color: transparent;
+    border: 1px solid #6b6b6b;
+    border-radius: 5px;
+    outline: none;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    @include flex-sides;
+
+    &:hover,
+    &:focus {
+      color: $color-green-darker;
+    }
+  }
+
+  &-bar {
+    list-style-type: none;
+    padding: 5px 0 0 0;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+    background-color: white;
+    border-radius: 24px 5px 5px 5px;
+    font-size: 14px;
+    text-align: right;
+
+    &__item {
+      padding: 10px;
+      color: $color-dark;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $color-green-darker;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-bar {
+    padding: 0;
+    position: static;
+    display: flex;
+    gap: 40px;
+    font-size: 1em;
+  }
+}
