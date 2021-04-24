@@ -1,11 +1,11 @@
 .info {
   font-family: $font-text;
   color: $color-dark;
+  text-align: center;
   padding: 16px 20px;
 
   &__heading {
     font-family: $font-headings;
-    text-align: center;
     font-size: 21px;
     line-height: 1.5;
     margin: 30px 0;
@@ -48,7 +48,7 @@
 
     &:hover,
     &:focus {
-      // color: DOPLNIT;
+      color: $color-brown;
     }
   }
 
