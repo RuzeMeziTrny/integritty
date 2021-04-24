@@ -12,5 +12,10 @@
   &__link {
     font-family: $font-headings;
     color: $color-red;
+
+    &:hover,
+    &:focus {
+      // color: DOPLNIT;
+    }
   }
 }
