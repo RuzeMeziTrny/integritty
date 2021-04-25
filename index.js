@@ -62,13 +62,17 @@ const HeroImg = () => {
 };
 
 const Counter = (props) => {
+  const numberFormatted = props['vykazana_ockovani_celkem'].toLocaleString();
+  const date = props['datum'].split('-');
+  const dateFormatted = `${date[2]}. ${date[1]}. ${date[0]}`;
+
   const counterElm = document.createElement('div');
   counterElm.className = 'counter';
   counterElm.innerHTML = `
     <p class="counter__text">V ČR již očkováno lidí</p>
-    <p class="counter__number">${props.number}</p>
+    <p class="counter__number">${numberFormatted}</p>
     <div>
-      <p class="counter__date">${props.date}</p>
+      <p class="counter__date">${dateFormatted}</p>
       <svg
           class="counter__info"
           width="14"
@@ -101,17 +105,22 @@ const Counter = (props) => {
   return counterElm;
 };
 
-const Hero = (props) => {
+const Hero = () => {
   const heroElm = document.createElement('section');
   heroElm.className = 'hero';
-  heroElm.append(HeroImg(), Counter(props));
+  heroElm.append(HeroImg());
+
+  const url =
+    'https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/zakladni-prehled.json';
+
+  fetch(url)
+    .then((resp) => resp.json())
+    .then((json) => {
+      let apiData = json.data[0];
+      heroElm.append(Counter(apiData));
+    });
 
   return heroElm;
-};
-
-const counterData = {
-  number: 1031033 /* upravit mezery po trojicích */,
-  date: '16. 3. 2021' /* upravit formát (datový typ) */,
 };
 
 /* ----------- components for info section ----------- */
@@ -195,7 +204,7 @@ const infoData = [
 ];
 
 const mainElm = document.createElement('main');
-mainElm.append(Hero(counterData), Info({ items: infoData }));
+mainElm.append(Hero(), Info({ items: infoData }));
 
 /* ----------- component for footer element ----------- */
 const Footer = () => {
@@ -204,8 +213,8 @@ const Footer = () => {
   footerElm.innerHTML = `
     <p class="footer__copyright">2021 &copy; Ministerstvo zdravotnictví ČR. Všechna práva vyhrazena.</p>
     <div>
-      <a class="footer__link" href="#" target="_blank">Prohlášení o přístupnosti webových stránek</a>
-      <a class="footer__link" href="#" target="_blank">Ochrana osobních údajů</a>
+      <a class="footer__link" href="#">Prohlášení o přístupnosti webových stránek</a>
+      <a class="footer__link" href="#">Ochrana osobních údajů</a>
     </div>
   `;
 

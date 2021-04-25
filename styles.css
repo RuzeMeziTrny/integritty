@@ -192,6 +192,12 @@ body {
   z-index: -1;
 }
 
+@media screen and (min-width: 680px) {
+  .hero-img {
+    background-size: auto 135%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     -ms-grid-rows: 570px 130px auto;
@@ -271,8 +277,7 @@ body {
 
 .counter__title {
   position: absolute;
-  right: -220px;
-  top: 165px;
+  top: 150px;
   padding: 0 1em;
   background-color: white;
   color: #3d3d3d;
@@ -292,6 +297,10 @@ body {
   }
   .counter__number {
     font-size: 3em;
+  }
+  .counter__title {
+    right: -190px;
+    top: 180px;
   }
 }
 
