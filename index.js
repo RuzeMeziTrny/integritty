@@ -221,6 +221,6 @@ const Footer = () => {
   return footerElm;
 };
 
-/* ----------- to append all the DOM elements to the app ----------- */
+/* ----------- to append all the components to the app ----------- */
 const appElm = document.querySelector('#app');
 appElm.append(Header(), mainElm, Footer());

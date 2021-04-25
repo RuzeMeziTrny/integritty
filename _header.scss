@@ -12,7 +12,7 @@
   line-height: 1.15;
 
   &__text {
-    color: #636363;
+    color: $color-dark-lighter-m;
     margin: 0;
 
     &--red {
@@ -38,10 +38,10 @@
     font-weight: inherit;
     font-size: 14px;
     line-height: 1.5;
-    color: $color-dark;
     text-transform: inherit;
+    color: $color-dark;
     background-color: transparent;
-    border: 1px solid #6b6b6b;
+    border: 1px solid $color-dark-lighter-l;
     border-radius: 5px;
     outline: none;
     width: 80px;
@@ -90,8 +90,12 @@
     padding: 0;
     position: static;
     display: flex;
-    gap: 40px;
+    gap: 60px;
     border-radius: 0px;
     font-size: 21px;
+
+    &__item {
+      padding: 0;
+    }
   }
 }

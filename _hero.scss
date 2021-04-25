@@ -1,5 +1,5 @@
 .hero {
-  color: #ffffff;
+  color: white;
   font-family: $font-headings;
   font-weight: 700;
   line-height: 1.5;
@@ -63,8 +63,7 @@
 
       &__heading {
         font-size: 4em;
-        margin-top: 0;
-        margin-bottom: 1.2em;
+        margin: 0 0 1.2em 0;
       }
 
       &__circle:after {
@@ -92,7 +91,7 @@
   z-index: 1;
 
   &::after {
-    content: ' ';
+    content: '';
     border-radius: 50%;
     position: absolute;
     top: -12px;
@@ -108,8 +107,8 @@
   }
 
   &__number {
-    font-size: 2em;
     margin: 0;
+    font-size: 2em;
   }
 
   &__date {
@@ -144,8 +143,8 @@
     }
 
     &__title {
-      right: -190px;
       top: 180px;
+      right: -190px;
     }
   }
 }
