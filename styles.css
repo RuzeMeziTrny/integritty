@@ -15,6 +15,10 @@ body {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
@@ -107,10 +111,6 @@ body {
 
 .nav-bar__item:hover, .nav-bar__item:focus {
   color: #24afa1;
-}
-
-.hidden {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -240,6 +240,7 @@ body {
           flex-direction: column;
   border: 6px solid #dadada;
   position: relative;
+  z-index: 1;
 }
 
 .counter::after {
@@ -250,6 +251,7 @@ body {
   left: -12px;
   right: -12px;
   bottom: -12px;
+  z-index: -1;
   border: 6px solid white;
 }
 
@@ -265,6 +267,19 @@ body {
 .counter__date {
   margin: 0;
   display: inline-block;
+}
+
+.counter__title {
+  position: absolute;
+  right: -220px;
+  top: 165px;
+  padding: 0 1em;
+  background-color: white;
+  color: #3d3d3d;
+  font-weight: 400;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {

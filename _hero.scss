@@ -83,6 +83,7 @@
   flex-direction: column;
   border: 6px solid $color-grey;
   position: relative;
+  z-index: 1;
 
   &::after {
     content: ' ';
@@ -92,6 +93,7 @@
     left: -12px;
     right: -12px;
     bottom: -12px;
+    z-index: -1;
     border: 6px solid white;
   }
 
@@ -107,6 +109,18 @@
   &__date {
     margin: 0;
     display: inline-block;
+  }
+
+  &__title {
+    position: absolute;
+    right: -220px;
+    top: 165px;
+    padding: 0 1em;
+    background-color: white;
+    color: $color-dark;
+    font-weight: 400;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
   }
 }
 
