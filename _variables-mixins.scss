@@ -1,14 +1,14 @@
 $font-headings: 'Oswald', sans-serif;
 $font-text: 'Roboto', sans-serif;
 
-$color-dark: #3d3d3d;
-$color-dark-lighter: #434343;
-$color-yellow: #ffbd16;
+$color-dark: rgb(61, 61, 61);
+$color-dark-lighter: rgb(67, 67, 67);
+$color-yellow: rgb(255, 189, 22);
 $color-green: rgba(36, 175, 161, 0.66);
 $color-green-darker: rgb(36, 175, 161);
-$color-brown: #7c4341;
-$color-grey: #dadada;
-$color-red: #d0384b;
+$color-brown: rgb(124, 67, 65);
+$color-grey: rgb(218, 218, 218);
+$color-red: rgb(208, 56, 75);
 
 @mixin flex-sides {
   display: flex;
