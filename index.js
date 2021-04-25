@@ -53,6 +53,7 @@ const HeroImg = () => {
     <h1 class="hero-img__heading">
       Udělejme
       <span class="hero-img__circle">tečku</span>
+      <br />
       za pandemií.
     </h1>
   `;
@@ -97,7 +98,7 @@ const Hero = (props) => {
 };
 
 const counterData = {
-  number: 1031033,
+  number: 1031033 /* upravit mezery po trojicích */,
   date: '16. 3. 2021' /* upravit formát (datový typ) */,
 };
 
@@ -190,8 +191,10 @@ const Footer = () => {
   footerElm.className = 'footer';
   footerElm.innerHTML = `
     <p class="footer__copyright">2021 &copy; Ministerstvo zdravotnictví ČR. Všechna práva vyhrazena.</p>
-    <a class="footer__link" href="#" target="_blank">Prohlášení o přístupnosti webových stránek</a>
-    <a class="footer__link" href="#" target="_blank">Ochrana osobních údajů</a>
+    <div>
+      <a class="footer__link" href="#" target="_blank">Prohlášení o přístupnosti webových stránek</a>
+      <a class="footer__link" href="#" target="_blank">Ochrana osobních údajů</a>
+    </div>
   `;
 
   return footerElm;

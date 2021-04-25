@@ -46,6 +46,16 @@ body {
   color: #d0384b;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    height: 105px;
+    padding: 0 9%;
+  }
+  .logo {
+    font-size: 26px;
+  }
+}
+
 .nav-menu {
   font-family: inherit;
   font-weight: inherit;
@@ -85,6 +95,7 @@ body {
   background-color: white;
   border-radius: 24px 5px 5px 5px;
   font-size: 14px;
+  line-height: 1.5;
   text-align: right;
 }
 
@@ -113,7 +124,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     gap: 40px;
-    font-size: 1em;
+    border-radius: 0px;
+    font-size: 21px;
   }
 }
 
@@ -121,6 +133,7 @@ body {
   color: #ffffff;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
+  line-height: 1.5;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -140,7 +153,7 @@ body {
   background-image: linear-gradient(rgba(36, 175, 161, 0.66), rgba(36, 175, 161, 0.66)), url("/assets/vaccination.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 120%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,13 +167,12 @@ body {
 
 .hero-img__heading {
   font-size: 38px;
-  line-height: 56px;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
   text-align: center;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
-  padding: 0 20px;
+  margin-top: 0.7em;
 }
 
 .hero-img__circle {
@@ -178,6 +190,28 @@ body {
   top: -26px;
   right: -4px;
   z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    -ms-grid-rows: 570px 130px auto;
+        grid-template-rows: 570px 130px auto;
+  }
+  .hero-img {
+    background-position: 78% center;
+    background-size: auto 200%;
+  }
+  .hero-img__heading {
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+  }
+  .hero-img__circle:after {
+    width: 180px;
+    height: 180px;
+    top: -46px;
+    right: -6px;
+  }
 }
 
 .counter {
@@ -220,25 +254,36 @@ body {
 }
 
 .counter__text {
-  line-height: 1.5;
   margin: 0;
 }
 
 .counter__number {
   font-size: 2em;
-  line-height: 1.5;
   margin: 0;
 }
 
 .counter__date {
-  line-height: 1.5;
   margin: 0;
   display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .counter {
+    width: 260px;
+    height: 260px;
+  }
+  .counter__text, .counter__date {
+    font-size: 18px;
+  }
+  .counter__number {
+    font-size: 3em;
+  }
 }
 
 .info {
   font-family: "Roboto", sans-serif;
   color: #3d3d3d;
+  line-height: 1.5;
   text-align: center;
   padding: 16px 20px;
 }
@@ -246,13 +291,21 @@ body {
 .info__heading {
   font-family: "Oswald", sans-serif;
   font-size: 21px;
-  line-height: 1.5;
   margin: 30px 0;
 }
 
 .info a {
   font-family: "Oswald", sans-serif;
   display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    padding: 16px 9% 32px 9%;
+  }
+  .info__heading {
+    font-size: 2em;
+  }
 }
 
 .card-container {
@@ -287,7 +340,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.5;
 }
 
 .card__logo {
@@ -311,6 +363,7 @@ body {
 .card__link {
   font-weight: 500;
   color: #7c4341;
+  text-decoration: none;
   border: 2px solid #7c4341;
   border-radius: 5px;
   padding: 8px 20px;
@@ -321,6 +374,12 @@ body {
 .card__link:hover, .card__link:focus {
   color: #d0384b;
   border: 2px solid #d0384b;
+}
+
+@media screen and (min-width: 768px) {
+  .card__link {
+    font-size: 18px;
+  }
 }
 
 .footer {
@@ -338,9 +397,37 @@ body {
 .footer__link {
   font-family: "Oswald", sans-serif;
   color: #d0384b;
+  display: block;
 }
 
 .footer__link:hover, .footer__link:focus {
   color: #7c4341;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 16px 9%;
+  }
+  .footer__link {
+    display: inline;
+  }
+  .footer__link:first-child {
+    border-right: 2px solid #d0384b;
+    padding-right: 0.2em;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

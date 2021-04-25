@@ -2,6 +2,7 @@
   color: #ffffff;
   font-family: $font-headings;
   font-weight: 700;
+  line-height: 1.5;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 326px 49px auto;
@@ -14,19 +15,17 @@
       url('/assets/vaccination.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
-    // height: 375px;
+    background-size: auto 120%;
     @include flex-center;
 
     &__heading {
       font-size: 38px;
-      line-height: 56px;
       text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
       text-align: center;
       text-transform: uppercase;
       position: relative;
       z-index: 1;
-      padding: 0 20px;
+      margin-top: 0.7em;
     }
 
     &__circle {
@@ -44,7 +43,30 @@
       top: -26px;
       right: -4px;
       z-index: -1;
-      // pozicování není ideální řešení, jak to udělat jinak?
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    grid-template-rows: 570px 130px auto;
+
+    &-img {
+      background-position: 78% center;
+      background-size: auto 200%;
+
+      &__heading {
+        font-size: 4em;
+        margin-top: 0;
+        margin-bottom: 1.2em;
+      }
+
+      &__circle:after {
+        width: 180px;
+        height: 180px;
+        top: -46px;
+        right: -6px;
+      }
     }
   }
 }
@@ -74,19 +96,32 @@
   }
 
   &__text {
-    line-height: 1.5;
     margin: 0;
   }
 
   &__number {
     font-size: 2em;
-    line-height: 1.5;
     margin: 0;
   }
 
   &__date {
-    line-height: 1.5;
     margin: 0;
     display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .counter {
+    width: 260px;
+    height: 260px;
+
+    &__text,
+    &__date {
+      font-size: 18px;
+    }
+
+    &__number {
+      font-size: 3em;
+    }
   }
 }
