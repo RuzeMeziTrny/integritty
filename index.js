@@ -34,6 +34,7 @@ const Header = () => {
     </nav>
   `;
 
+  // when Menu is clicked, show or hide the navigation
   const showHideNav = () => {
     const navBar = headerElm.querySelector('#nav-bar');
     navBar.classList.toggle('hidden');
@@ -64,7 +65,19 @@ const HeroImg = () => {
 const Counter = (props) => {
   const numberFormatted = props['vykazana_ockovani_celkem'].toLocaleString();
   const date = props['datum'].split('-');
-  const dateFormatted = `${date[2]}. ${date[1]}. ${date[0]}`;
+
+  // if the day/month starts with "0", remove it
+  let day = date[2];
+  let month = date[1];
+  const year = date[0];
+  if (date[2].startsWith('0')) {
+    day = date[2].slice(1);
+  }
+  if (date[1].startsWith('0')) {
+    month = date[1].slice(1);
+  }
+
+  const dateFormatted = `${day}. ${month}. ${year}`;
 
   const counterElm = document.createElement('div');
   counterElm.className = 'counter';
@@ -94,6 +107,7 @@ const Counter = (props) => {
     </div>
   `;
 
+  // when hover on (i), show and then hide the information
   const showHideInfo = () => {
     counterElm.querySelector('.counter__title').classList.toggle('hidden');
   };

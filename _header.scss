@@ -90,12 +90,16 @@
     padding: 0;
     position: static;
     display: flex;
-    gap: 60px;
+    // gap: 60px; Safari doesn't support flexbox gap -> margin-right of the first-child used
     border-radius: 0px;
     font-size: 21px;
 
     &__item {
       padding: 0;
+
+      &:first-child {
+        margin-right: 60px;
+      }
     }
   }
 }
