@@ -1,11 +1,11 @@
 .footer {
-  font-family: $font-text;
-  color: $color-dark-lighter;
   line-height: 1.5;
   text-align: center;
   padding: 16px 20px;
 
   &__copyright {
+    font-family: $font-text;
+    color: $color-dark-lighter-s;
     margin: 0.5em 0;
   }
 
