@@ -142,7 +142,7 @@ const InfoCard = (props) => {
   const infoCardElm = document.createElement('div');
   infoCardElm.className = 'card';
   infoCardElm.innerHTML = `
-    <img class="card__logo" src="/assets/${props.logo}" alt="logo" />
+    <img class="card__logo" src="./assets/${props.logo}" alt="logo" />
     <a class="card__name" href="${props.link}" target="_blank">${props.name}</a>
     <p class="card__text">${props.text}</p>
     <a class="card__link" href="${props.link}" target="_blank">
